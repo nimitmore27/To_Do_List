@@ -1,35 +1,32 @@
-const todoitem = document.getElementsByClassName("taskcon")[0];
-const insert = document.getElementById("inputtxt");
-const del = document.getElementById("del");
-
-insert.addEventListener("keydown",function(event){
-    if(event.key === 'Enter')
+const ToDoItems = document.getElementsByClassName("to_do_items")[0];
+const input = document.getElementById("input");
+const trashIcon = document.getElementById("trash");
+input.addEventListener("keydown",function(event){
+    if(event.key === "Enter")
     {
-        addtask();
+        addItem();
     }
-})
-function addtask(){
+});
+function addItem(){
     var divParent = document.createElement("div");
     var divChild = document.createElement("div");
-    var checkbtn = document.createElement("button");
-
-    divParent.className = 'item';
-    divParent.innerHTML = '<div>'+insert.value+'</div>';
-
-    checkbtn.className = 'Completed';
-    checkbtn.style.color = 'white';
-    checkbtn.addEventListener("click",function(){
-        checkbtn.style.color = "red";
+    var checkIcon = document.createElement("i");
+    var trashIcon = document.createElement("i");
+    divParent.className = "item";
+    divParent.innerHTML = "<div>"+input.value+"</div>";
+    checkIcon.className = "fas fa-check-square";
+    checkIcon.style.color = "lightgray";
+    checkIcon.addEventListener("click",function(){
+        checkIcon.style.color = "limegreen";
     })
-    divChild.appendChild(checkbtn);
-    del.className = "Delete";
-    del.style.color = "red";
-    del.addEventListener("click",function(){
+    divChild.appendChild(checkIcon);
+    trashIcon.className = "fas fa-trash";
+    trashIcon.style.color = "darkgray";
+    trashIcon.addEventListener("click",function(){
         divParent.remove();
     })
-    divChild.appendChild(del);
+    divChild.appendChild(trashIcon);
     divParent.appendChild(divChild);
-    todoitem.appendChild(divParent);
+    ToDoItems.appendChild(divParent);
     input.value = '';
 }
-

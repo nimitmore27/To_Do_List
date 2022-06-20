@@ -1,103 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
 *{
-  box-sizing: border-box;  
-  margin: 0;
-  padding: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body{
-    background-color: rgb(126, 117, 117);
+    font-family: 'Ubuntu', sans-serif;
+    background-image:linear-gradient(to right,rgb(46, 44, 44),black);
+    color: white;    
 }
 .container{
+    width: 50%;
     margin: auto;
-    width: 95%;
-    color: rgb(231, 200, 200);
-}
-.container h3{
-    font-size: 30px;
 }
 .nav{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    margin : 25px 0;
+    margin: 25px 0;
 }
-.input{
-    width: 350px;
+.nav h2{
+    font-size: 2rem;
+}
+.user_input{
+    width: 400px;
     text-align: center;
 }
-#inputtxt{
+.user_input input{
     width: 80%;
+    outline: none;
     padding: 8px;
-    border-radius: 5px;
-    /* border-top-left-radius:10px;
-    border-bottom-left-radius:10px; */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition : all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
 }
-#inputtx:focus{
-    box-shadow: 0 0 100px rgb(248, 0, 0);
+.user_input input:focus{
+    box-shadow: 0 0 5px red;
     border: 1px solid red;
 }
-#inputbtn{
+.user_input button{
     cursor: pointer;
     padding: 8px;
-    width : 65px;
-    border-radius: 5px;
-
-    /* border-top-right-radius:10px;
-    border-bottom-right-radius:10px; */
-    font-size: 15px;
+    width: fit-content;
     transition: 1s;
+    outline: none;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
-#inputbtn:hover{
+.user_input button:hover{
+    background-color: transparent;
     color: white;
-    background-color: black;
-
 }
-#taskcon{
+.to_do_items{
     width: 500px;
     margin: auto;
 }
-.items{
-    background-color: black;
+.item{
+    background-color: white;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    padding: 15px;
-    color: rgb(49, 46, 46);
+    border-radius: 2px;
+    padding: 16px;
+    color: #454545;
     margin-top: 10px;
     font-size: 1rem;
     text-transform: uppercase;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition : all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
 }
 .item:hover{
-    box-shadow: 0 0 red;
+    box-shadow: 0 0 20px red;
+    border: 1px solid red;
 }
-.item button{
+.item i{
     cursor: pointer;
     margin: 0 5px;
 }
-@media(max-width:768px){
+@media(max-width:768px)
+{
     .nav{
         align-items: center;
         flex-direction: column;
     }
-    h3{
-        margin:  10px 0;   
+    .nav h2{
+        margin: 10px 0;
+        align-items: center;
     }
-    .input{
-        width: 100px;
+    .user_input{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
-    #taskcon{
-        width: 100px;
+    .to_do_items{
+        width: 100%;
     }
 }
 @media(max-width:480px){
-    #inputtxt{
+    .user_input{
         width: 74%;
+        display: flex;
+        justify-content: space-between;
     }
 }
 @media(max-width:320px){
-    #inputtxt{
+    .user_input{
         width: 60%;
     }
 }
