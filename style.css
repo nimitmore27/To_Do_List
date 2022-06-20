@@ -109,13 +109,28 @@ body{
 }
 @media(max-width:480px){
     .user_input{
-        width: 74%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+    .user_input input{
+        height: 20%;
+    }
+    .user_input #btn{
+        font-size: 6px;
+
     }
 }
 @media(max-width:320px){
     .user_input{
-        width: 60%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .user_input input{
+        height: 20%;
+    }
+    .user_input #btn{
+        font-size: 6px;
     }
 }
