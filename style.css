@@ -28,7 +28,7 @@ body{
     text-align: center;
 }
 .user_input input{
-    width: 80%;
+    width: 75%;
     outline: none;
     padding: 8px;
     border-top-left-radius: 5px;
