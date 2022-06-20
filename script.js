@@ -13,11 +13,13 @@ function addItem(){
     var checkIcon = document.createElement("i");
     var trashIcon = document.createElement("i");
     divParent.className = "item";
-    divParent.innerHTML = "<div>"+input.value+"</div>";
+    divParent.innerHTML = "<div id='strike'>"+input.value+"</div>";
     checkIcon.className = "fas fa-check-square";
     checkIcon.style.color = "lightgray";
     checkIcon.addEventListener("click",function(){
         checkIcon.style.color = "limegreen";
+        let temp = document.getElementById("strike").innerHTML;
+        document.getElementById("strike").innerHTML = "<strike>"+temp+"</strike>";
     })
     divChild.appendChild(checkIcon);
     trashIcon.className = "fas fa-trash";
