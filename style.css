@@ -1,0 +1,103 @@
+*{
+  box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+}
+body{
+    background-color: rgb(126, 117, 117);
+}
+.container{
+    margin: auto;
+    width: 95%;
+    color: rgb(231, 200, 200);
+}
+.container h3{
+    font-size: 30px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin : 25px 0;
+}
+.input{
+    width: 350px;
+    text-align: center;
+}
+#inputtxt{
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    /* border-top-left-radius:10px;
+    border-bottom-left-radius:10px; */
+}
+#inputtx:focus{
+    box-shadow: 0 0 100px rgb(248, 0, 0);
+    border: 1px solid red;
+}
+#inputbtn{
+    cursor: pointer;
+    padding: 8px;
+    width : 65px;
+    border-radius: 5px;
+
+    /* border-top-right-radius:10px;
+    border-bottom-right-radius:10px; */
+    font-size: 15px;
+    transition: 1s;
+}
+#inputbtn:hover{
+    color: white;
+    background-color: black;
+
+}
+#taskcon{
+    width: 500px;
+    margin: auto;
+}
+.items{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 15px;
+    color: rgb(49, 46, 46);
+    margin-top: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.item:hover{
+    box-shadow: 0 0 red;
+}
+.item button{
+    cursor: pointer;
+    margin: 0 5px;
+}
+@media(max-width:768px){
+    .nav{
+        align-items: center;
+        flex-direction: column;
+    }
+    h3{
+        margin:  10px 0;   
+    }
+    .input{
+        width: 100px;
+    }
+    #taskcon{
+        width: 100px;
+    }
+}
+@media(max-width:480px){
+    #inputtxt{
+        width: 74%;
+    }
+}
+@media(max-width:320px){
+    #inputtxt{
+        width: 60%;
+    }
+}
